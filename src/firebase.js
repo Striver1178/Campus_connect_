@@ -1,17 +1,17 @@
+// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgqW-RRLAF62SEYc2rjqq2wmYhVwtBfKU",
-  authDomain: "campusconnect-e49ef.firebaseapp.com",
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
   projectId: "campusconnect-e49ef",
-  storageBucket: "campusconnect-e49ef.appspot.com",
-  messagingSenderId: "147866143951",
-  appId: "1:147866143951:web:a48acf5d3dc3b695607bba",
-  measurementId: "G-HNBVLL5X0Z"
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MSG_ID",
+  appId: "YOUR_APP_ID"
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
-export { db };
+// ✅ Named export for Firestore DB
+export const db = getFirestore(app);
